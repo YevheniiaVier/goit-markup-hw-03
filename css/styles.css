@@ -37,17 +37,12 @@ Roboto 900
   --hover-btn-color: #188ce8;
   --transparent-color: rgba(255, 255, 255, 0.6);
 }
-
+/* 
 section,
 .link,
 .logo,
 img {
   outline: 2px solid tomato;
-}
-/* 
-p,
-.title {
-  outline: 2px solid green;
 } */
 
 /* --------------сторінка Студія ------------------*/
@@ -61,7 +56,7 @@ body {
   background-color: var(--bg-white-color);
 }
 header {
-  border: 1px solid #ECECEC
+  border-bottom: 1px solid #ececec;
 }
 h1,
 h2,
@@ -90,6 +85,8 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* ---------------main nav ---------------------*/
 
@@ -338,6 +335,10 @@ footer {
   color: var(--accent-color);
 }
 
+/* site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px; */
 /* ----------------portfolo button---------------- */
 
 .btn.secondary {
@@ -359,9 +360,10 @@ footer {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* -------------------work examples------------------- */
+/* -------------------work examples menu------------------- */
 .work-examples {
-  padding-top: 94px ;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .filter.list {
   margin-bottom: 34px;
@@ -371,19 +373,23 @@ footer {
 .filter .item + .item {
   margin-left: 8px;
 }
-
-
+/* -------------------work examples cards------------------- */
 .examples-cards {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--examples-gap));
   margin-top: calc(-1 * var(--examples-gap));
 }
-.examples-cards .title {
-  margin-top: 20px;
-  margin-bottom: 4px;
+.card-content {
+  border: 1px solid #eeeeee;
+}
+.card-content {
+  padding: 20px 24px;
 }
 
+.examples-cards .text {
+  margin-top: 4px;
+}
 
 .examples-cards > .item {
   flex-basis: calc(100% / 3 - var(--examples-gap));
