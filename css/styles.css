@@ -201,9 +201,10 @@ img {
 }
 
 /* -----------section ------------------*/
-/* .section {
+.section {
   padding-top: 94px;
-} */
+  padding-bottom: 94px;
+}
 
 .section-title {
   margin-bottom: 50px;
@@ -217,10 +218,7 @@ img {
 }
 
 /*---------------- preferences--------------- */
-.preferences-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .preferences {
   display: flex;
   justify-content: space-between;
@@ -254,7 +252,7 @@ img {
 
 /* ----------------------activities -------------------*/
 .section-activities {
-  padding-bottom: 94px;
+  padding-top: 0;
 }
 
 .activities {
@@ -263,10 +261,7 @@ img {
 }
 
 /* -----------------team -----------------*/
-.section-team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .team {
   background-color: var(--accent-background-color);
 }
@@ -285,8 +280,6 @@ img {
 
 .team .title {
   margin-top: 30px;
-  margin-bottom: 10px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -298,7 +291,7 @@ img {
 .team .text {
   font-size: 16px;
   line-height: 1.18;
-
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -335,11 +328,7 @@ footer {
   color: var(--accent-color);
 }
 
-/* site-nav .link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px; */
-/* ----------------portfolo button---------------- */
+/* ----------------portfolio button---------------- */
 
 .btn.secondary {
   padding: 6px 22px;
@@ -361,12 +350,9 @@ footer {
 }
 
 /* -------------------work examples menu------------------- */
-.work-examples {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+
 .filter.list {
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   display: flex;
   justify-content: center;
 }
@@ -382,8 +368,6 @@ footer {
 }
 .card-content {
   border: 1px solid #eeeeee;
-}
-.card-content {
   padding: 20px 24px;
 }
 
@@ -396,19 +380,6 @@ footer {
   margin-left: var(--examples-gap);
   margin-top: var(--examples-gap);
 }
-
-/* 
-.examples-cards > .item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-.examples-cards .item:nth-child(3n) {
-  margin-right: 0;
-}
-.examples-cards .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
-} */
 
 .work-examples .link {
   color: inherit;
