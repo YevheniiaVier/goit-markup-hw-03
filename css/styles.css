@@ -1,28 +1,5 @@
-/*  
-primary text color #757575
-title text color #212121
-accent-color #2196F3
-white-color #FFFFFF
-main-background-color #E5E5E5
-secondary-background-color #2F303A
-accent-background-color #F5F4FA
-black-color #000000
-header-color #ECECEC
-portfolio-secondary-bgc #EEEEEE
-hover-btn-color #188CE8
-transparent-color rgba(255, 255, 255, 0.6)
-
-*/
-
-/* Raleway 700 
-Roboto 400
-Roboto 500
-Roboto 700
-Roboto 900
-*/
-
 :root {
-  --examples-gap: 30px;
+  --card-gap: 30px;
   --team-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   --primary-text-color: #757575;
@@ -37,13 +14,6 @@ Roboto 900
   --hover-btn-color: #188ce8;
   --transparent-color: rgba(255, 255, 255, 0.6);
 }
-/* 
-section,
-.link,
-.logo,
-img {
-  outline: 2px solid tomato;
-} */
 
 /* --------------сторінка Студія ------------------*/
 body {
@@ -55,6 +25,7 @@ body {
 
   background-color: var(--bg-white-color);
 }
+
 header {
   border-bottom: 1px solid #ececec;
 }
@@ -66,6 +37,12 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -75,7 +52,6 @@ p {
   text-decoration: none;
 }
 .container {
-  /* outline: 2px solid blue; */
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -83,11 +59,6 @@ p {
   width: 1200px;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 /* ---------------main nav ---------------------*/
 
 .main-nav {
@@ -221,11 +192,19 @@ img {
 
 .preferences {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.preferences .item {
-  width: 270px;
+.preferences-item {
+  width: calc((100% - (3 * var(--card-gap))) / 4);
 }
+
+.preferences-item:not(:nth-child(4n)) {
+  margin-right: var(--card-gap);
+}
+.preferences-item:not(:nth-last-child(-n + 4)) {
+  margin-bottom: var(--card-gap);
+}
+
 .preferences .title {
   margin-bottom: 10px;
 
@@ -257,9 +236,10 @@ img {
 
 .activities {
   display: flex;
-  justify-content: space-between;
 }
-
+.activities > .item + .item {
+  margin-left: var(--card-gap);
+}
 /* -----------------team -----------------*/
 
 .team {
@@ -267,17 +247,19 @@ img {
 }
 .team-set {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 .team-card {
-  width: 270px;
+  width: calc((100% - (3 * var(--card-gap))) / 4);
   padding-bottom: 30px;
   box-shadow: var(--team-card-shadow);
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--bg-white-color);
 }
-
+.team-card:not(:nth-last-child(4)) {
+  margin-left: var(--card-gap);
+}
 .team .title {
   margin-top: 30px;
   font-weight: 500;
@@ -363,8 +345,8 @@ footer {
 .examples-cards {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1 * var(--examples-gap));
-  margin-top: calc(-1 * var(--examples-gap));
+  margin-left: calc(-1 * var(--card-gap));
+  margin-top: calc(-1 * var(--card-gap));
 }
 .card-content {
   border: 1px solid #eeeeee;
@@ -376,9 +358,9 @@ footer {
 }
 
 .examples-cards > .item {
-  flex-basis: calc(100% / 3 - var(--examples-gap));
-  margin-left: var(--examples-gap);
-  margin-top: var(--examples-gap);
+  flex-basis: calc(100% / 3 - var(--card-gap));
+  margin-left: var(--card-gap);
+  margin-top: var(--card-gap);
 }
 
 .work-examples .link {
