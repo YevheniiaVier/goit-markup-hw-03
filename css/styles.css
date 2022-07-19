@@ -121,6 +121,9 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
@@ -131,6 +134,7 @@ img {
 .hero {
   text-align: center;
   background-color: var(--secondary-background-color);
+  padding: 200px 0;
 }
 
 .hero-title {
@@ -253,7 +257,6 @@ img {
 }
 .team-card {
   width: calc((100% - (3 * var(--card-gap))) / 4);
-  padding-bottom: 30px;
   box-shadow: var(--team-card-shadow);
   border-radius: 0px 0px 4px 4px;
 
@@ -262,12 +265,16 @@ img {
 .team-card:not(:nth-last-child(4)) {
   margin-left: var(--card-gap);
 }
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .team .title {
-  margin-top: 30px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   color: var(--title-text-color);
+  margin-bottom: 10px;
 
   text-align: center;
 }
@@ -275,17 +282,13 @@ img {
 .team .text {
   font-size: 16px;
   line-height: 1.18;
-  margin-top: 10px;
   text-align: center;
 }
 
 /* ----------------footer -------------------*/
 footer {
+  padding: 60px 0;
   background-color: var(--secondary-background-color);
-}
-.bottom {
-  padding-top: 60px;
-  padding-bottom: 60px;
 }
 
 .bottom .logo {
@@ -355,10 +358,6 @@ footer {
   padding: 20px 24px;
 }
 
-.examples-cards .text {
-  margin-top: 4px;
-}
-
 .examples-cards > .item {
   flex-basis: calc(100% / 3 - var(--card-gap));
   margin-left: var(--card-gap);
@@ -375,6 +374,7 @@ footer {
 }
 
 .work-examples .title {
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
